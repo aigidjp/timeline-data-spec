@@ -1,0 +1,2 @@
+# timeline_data_spec
+sipmle-geo-viewer上で時系列データを表示させる場合のオリジナルデータ、設定ファイルの仕様
