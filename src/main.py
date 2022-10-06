@@ -4,6 +4,7 @@ import pyproj
 from shapely import wkt
 
 
+# 時間間隔が等分で、属性が変化するデータをsimple-geo-viewerに読み込める形式に変換する方法
 def main():
     timeline_data = pd.read_csv(
         "./sample_data/timeline_data.csv",
