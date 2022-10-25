@@ -37,7 +37,9 @@ sipmle-geo-viewer上で時系列データを表示させる場合のオリジナ
 - simple-geo-viewerで読み取り可能なmenu.jsonの仕様を示す
 - 時系列データの表示に関わる項目は以下である
     - timeScale: 時間間隔（hour/minute/second/frame）
+      - 1frameは1/60秒として取り扱う
     - interval: 一つの要素が表している単位時間
+      - 小数点は取り扱わず、整数で指定する
     - start: 要素の0番目の値が示している時刻
     - end: 要素の最後の値が示している時刻
 
@@ -57,15 +59,14 @@ sipmle-geo-viewer上で時系列データを表示させる場合のオリジナ
         "xxx"
       ],
       "checked": true,
-      "color": "#333333"
+      "color": "#333333",
       "timeScale": "hour",
-      "interval": 1
+      "interval": 1,
       "start": "00:00",
       "end": "24:00"
     }
   ]
 }
-]
 ```
 
 - 時系列データのスケールが24時間ではない時は以下のように設定し、擬似的に時刻を割り当てる
@@ -78,13 +79,31 @@ sipmle-geo-viewer上で時系列データを表示させる場合のオリジナ
     {
       ...
       "timeScale": "second",
-      "interval": 1
+      "interval": 1,
       "start": "00:00",
       "end": "00:12"
     }
   ]
 }
-]
+```
+
+- 時系列データのスケールが1/10秒など1秒未満の場合は、以下のようにframeを設定する
+  - 以下の設定は6/60frame、つまり0.1秒間隔で12秒間（合計120個）のデータを表示することを示す
+
+```json
+{
+  "category": "時間間隔が等分で、属性が変化するデータ",
+  ...
+  "data": [
+    {
+      ...
+      "timeScale": "frame",
+      "interval": 6,
+      "start": "00:00",
+      "end": "00:12"
+    }
+  ]
+}
 ```
 
 ### オリジナルデータに必要な情報
