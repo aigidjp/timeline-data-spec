@@ -1,10 +1,10 @@
 # timeline_data_spec
 
-sipmle-geo-viewer上で時系列データを表示させる場合のオリジナルデータ、設定ファイルの仕様
+simple-geo-viewer上で時系列データを表示させる場合のオリジナルデータ、設定ファイルの仕様
 
 ## 時系列データ掲載のための変換仕様
 
-sipmle-geo-viewer上で時系列データを表示させる場合のオリジナルデータ、設定ファイルの仕様
+simple-geo-viewer上で時系列データを表示させる場合のオリジナルデータ、設定ファイルの仕様
 
 - リポジトリ
     - https://github.com/aigidjp/timeline-data-spec
@@ -27,7 +27,7 @@ sipmle-geo-viewer上で時系列データを表示させる場合のオリジナ
 
 ![mov.gif](./images/mov.gif)
 
-- これは道路リンクに擬似人流データを付与し、アニメーション化したものです
+- これは東京大学空間情報科学研究センターの擬似人流データを道路リンクに時間帯別通行量の形で付与し、アニメーション化したものです
 
 ![mov2.gif](./images/mov2.gif)
 
