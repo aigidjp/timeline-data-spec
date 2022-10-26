@@ -115,6 +115,7 @@ def main():
     merged = merged.set_crs(pyproj.CRS(4326))
     merged.to_file("./sample_data/output.geojson", driver="GeoJSON")
 
+    # ファイルが大規模になる場合、MVTへの変換が望ましい
     # MVTに変換するには以下のようなコマンドを実行
     # "tippecanoe -e ./sample_data/output -pf -pk -pC -Z 10 -z 14 -f ./sample_data/output.geojson"
 
