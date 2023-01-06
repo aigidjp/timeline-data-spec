@@ -45,7 +45,7 @@ simple-geo-viewer上で時系列データを表示させる場合のオリジナ
     - interval: 一つの要素が表している単位時間
       - 小数点は取り扱わず、整数で指定する
     - timeScaleAttributes: 時系列によって変化する値を持つ属性名
-    - primaryTimeScaleAttribute: 上記の中で、時系列ごとの描画を変化に用いる値を持つ属性名
+    - primaryTimeScaleAttribute: 上記の中で、描画の変化に用いる値を持つ属性名
     - start: 要素の0番目の値が示している時刻
     - end: 要素の最後の値が示している時刻
 
